@@ -1,0 +1,374 @@
+@charset "UTF-8";
+
+body {
+  margin: 0 auto;
+  background-image: url(./tatami-illust1.png);
+}
+
+.tittle {
+  margin: 0 auto;
+  color: #0f3350;
+  text-align: center;
+  font-size: 3em;
+}
+.reset {
+  margin-top: 50px;
+  text-align: center;
+  padding-bottom: 100px;
+}
+.resetButton {
+  width: 200px;
+  height: 50px;
+  font-size: 1.5em;
+  font-weight: bold;
+  background-color: #f5f5dc;
+  border-radius: 10px;
+}
+.resetButton:hover {
+  background-color: #e3d7a3;
+}
+.resetButton:active {
+  background-color: #e3d7a3;
+}
+
+.returnTop {
+  margin-top: 50px;
+  text-align: center;
+}
+.footer {
+  margin-top: 100px;
+  text-align: center;
+}
+
+.board {
+  margin: 0 auto;
+  width: 540px;
+  height: 540px;
+  border: 3px solid #000;
+}
+
+.square {
+  display: flex;
+}
+
+.btn {
+  width: 60px;
+  height: 60px;
+  padding: 0;
+  border: 0px;
+  background-color: #f8d98f;
+  position: relative;
+}
+
+.btn:hover {
+  background-color: #dbdbdb;
+}
+
+.btn::before {
+  position: absolute;
+  content:"";
+  display:inline-block;
+  width: 2px;
+  height: 60px;
+  background-color:#000;
+  position:absolute;
+  top:0;
+  left:50%;
+}
+
+.btn::after {
+  position: absolute;
+  content:"";
+  display:inline-block;
+  width: 60px;
+  height: 2px;
+  background-color:#000;
+  position:absolute;
+  top:50%;
+  left: 0;
+}
+
+.btn_1::before {
+  position: absolute;
+  content:"";
+  display:inline-block;
+  width: 2px;
+  height: 60px;
+  background-color:#000;
+  position:absolute;
+  top:50%;
+  left:50%;
+}
+
+.btn_9::before {
+  position: absolute;
+  content:"";
+  display:inline-block;
+  width: 2px;
+  height: 60px;
+  background-color:#000;
+  position:absolute;
+  top:-50%;
+  left:50%;
+}
+
+.btn_top::after {
+  position: absolute;
+  content:"";
+  display:inline-block;
+  width: 60px;
+  height: 2px;
+  background-color:#000;
+  position:absolute;
+  top:50%;
+  left: 50%;
+}
+.btn_end::after {
+  position: absolute;
+  content:"";
+  display:inline-block;
+  width: 60px;
+  height: 2px;
+  background-color:#000;
+  position:absolute;
+  top:50%;
+  left: -50%;
+}
+
+.btn.blkBtn::before {
+  background-color: #f8d98f;
+  background-image: url(./blk.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  z-index: 1;
+  top: 0;
+  left: 0;
+}
+.btn.whtBtn::before {
+  background-color: #f8d98f;
+  background-image: url(./wht.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  z-index: 1;
+  top: 0;
+  left: 0;
+}
+
+.btn.blkBtn, .btn.whtBtn {
+  background-color: #f8d98f;
+}
+
+.guide {
+  margin: 0 auto;
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.guideCont {
+  border: 3px solid #0f3350;
+  padding: 0 5px;
+  font-weight: bold;
+}
+.guideCont.whtColor {
+  color: #fff;
+}
+.guideCont.blkColor {
+  color: #000;
+}
+
+/* 勝利画面 */
+.victory {
+  margin: 0 auto;
+  text-align: center;
+  max-width: 80vw;
+}
+
+#victory {
+  font-size: 5.5vw;
+  font-weight: bold;
+  color: #e3d7a3;
+  -webkit-text-stroke: 1.2px #0f3350;
+  text-stroke: 1.2px #0f3350;
+  border: 3px solid #0f3350;
+}
+
+.replayMatch {
+  text-align: center;
+  width: 300px;
+  margin-top: 100px;
+  height: 50px;
+  font-size: 2em;
+  border-radius: 5px;
+  background-color: #f5f5dc;
+}
+.replayMatch:hover {
+  background-color: #e3d7a3;
+}
+.replayMatch:active{
+  background-color: #e3d7a3;
+}
+.victory.displaynone {
+  display: none;
+}
+.guide.displaynone {
+  display: none;
+}
+.board.displaynone {
+  display: none;
+}
+.resetButton.displaynone {
+  display: none;
+}
+
+.returnTop {
+  display: none;
+}
+
+.footer {
+  color: #fff;
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  padding: 5px 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+  background-color: #0f3350;
+}
+
+@media screen and (max-width:768px) { 
+  header {
+    max-width: 1280px
+  }
+  main {
+    max-width: 1280px
+  }
+  footer {
+    max-width: 1280px
+  }
+  .board {
+    margin: 0 auto;
+    width: 90vw;
+    height: 90vw;
+    border: 3px solid #000;
+  }
+  
+  .square {
+    display: flex;
+  }
+  
+  .btn {
+    width: 10vw;
+    height: 10vw;
+    padding: 0;
+    
+    background-color: #f8d98f;
+    position: relative;
+  }
+  
+  .btn:hover {
+    background-color: #dbdbdb;
+  }
+  
+  .btn::before {
+    position: absolute;
+    content:"";
+    display:inline-block;
+    width: 2px;
+    height: 10vw;
+    background-color:#000;
+    position:absolute;
+    top:0;
+    left:50%;
+  }
+  
+  .btn::after {
+    position: absolute;
+    content:"";
+    display:inline-block;
+    width: 10vw;
+    height: 2px;
+    background-color:#000;
+    position:absolute;
+    top:50%;
+    left: 0;
+  }
+  
+  .btn_1::before {
+    position: absolute;
+    content:"";
+    display:inline-block;
+    width: 2px;
+    height: 10vw;
+    background-color:#000;
+    position:absolute;
+    top:50%;
+    left:50%;
+  }
+  
+  .btn_9::before {
+    position: absolute;
+    content:"";
+    display:inline-block;
+    width: 2px;
+    height: 10vw;
+    background-color:#000;
+    position:absolute;
+    top:-50%;
+    left:50%;
+  }
+  
+  .btn_top::after {
+    position: absolute;
+    content:"";
+    display:inline-block;
+    width: 10vw;
+    height: 2px;
+    background-color:#000;
+    position:absolute;
+    top:50%;
+    left: 50%;
+  }
+  .btn_end::after {
+    position: absolute;
+    content:"";
+    display:inline-block;
+    width: 10vw;
+    height: 2px;
+    background-color:#000;
+    position:absolute;
+    top:50%;
+    left: -50%;
+  }
+  
+  .btn.blkBtn::before {
+    background-color: #f8d98f;
+    background-image: url(./blk.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    width: 10vw;
+    height: 10vw;
+    z-index: 1;
+    top: 0;
+    left: 0;
+  }
+  .btn.whtBtn::before {
+    background-color: #f8d98f;
+    background-image: url(./wht.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    width: 10vw;
+    height: 10vw;
+    z-index: 1;
+    top: 0;
+    left: 0;
+  }
+
+}

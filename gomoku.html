@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>五目並べ</title>
+  <link rel="stylesheet" href="gomoku.css">
+</head>
+<body>
+  <header>
+
+  </header>
+  <main>
+    <section class="tittle">
+      <h1>五目並べ</h1>
+    </section>
+
+    <section class='victory displaynone' id="victoryTop">
+      <span id="victory"></span>
+      <div class="replaybutton">
+        <input type="button" value="もう一度対戦する" class="replayMatch" id="replayMatch">
+      </div>
+    </section>
+
+    <section class="guide"><span class="guideCont" id="guideCont">黒の番です</span></section>
+
+    <section class="board" id="board">
+      <div class="line_1 square" id="line_1">
+        <button type="button" class="btn btn_1 btn_top" data-row="1" data-column="1"></button>
+        <button type="button" class="btn btn_1" data-row="1" data-column="2"></button>
+        <button type="button" class="btn btn_1" data-row="1" data-column="3"></button>
+        <button type="button" class="btn btn_1" data-row="1" data-column="4"></button>
+        <button type="button" class="btn btn_1" data-row="1" data-column="5"></button>
+        <button type="button" class="btn btn_1" data-row="1" data-column="6"></button>
+        <button type="button" class="btn btn_1" data-row="1" data-column="7"></button>
+        <button type="button" class="btn btn_1" data-row="1" data-column="8"></button>
+        <button type="button" class="btn btn_1 btn_end" data-row="1" data-column="9"></button>
+      </div>
+      <div class="line_2 square" id="line_2">
+        <button type="button" class="btn btn_top" data-row="2" data-column="1"></button>
+        <button type="button" class="btn" data-row="2" data-column="2"></button>
+        <button type="button" class="btn" data-row="2" data-column="3"></button>
+        <button type="button" class="btn" data-row="2" data-column="4"></button>
+        <button type="button" class="btn" data-row="2" data-column="5"></button>
+        <button type="button" class="btn" data-row="2" data-column="6"></button>
+        <button type="button" class="btn" data-row="2" data-column="7"></button>
+        <button type="button" class="btn" data-row="2" data-column="8"></button>
+        <button type="button" class="btn btn_end" data-row="2" data-column="9"></button>
+      </div>
+      <div class="line_3 square" id="line_3">
+        <button type="button" class="btn btn_top" data-row="3" data-column="1"></button>
+        <button type="button" class="btn" data-row="3" data-column="2"></button>
+        <button type="button" class="btn" data-row="3" data-column="3"></button>
+        <button type="button" class="btn" data-row="3" data-column="4"></button>
+        <button type="button" class="btn" data-row="3" data-column="5"></button>
+        <button type="button" class="btn" data-row="3" data-column="6"></button>
+        <button type="button" class="btn" data-row="3" data-column="7"></button>
+        <button type="button" class="btn" data-row="3" data-column="8"></button>
+        <button type="button" class="btn btn_end" data-row="3" data-column="9"></button>
+      </div>
+      <div class="line_4 square" id="line_4">
+        <button type="button" class="btn btn_top" data-row="4" data-column="1"></button>
+        <button type="button" class="btn" data-row="4" data-column="2"></button>
+        <button type="button" class="btn" data-row="4" data-column="3"></button>
+        <button type="button" class="btn" data-row="4" data-column="4"></button>
+        <button type="button" class="btn" data-row="4" data-column="5"></button>
+        <button type="button" class="btn" data-row="4" data-column="6"></button>
+        <button type="button" class="btn" data-row="4" data-column="7"></button>
+        <button type="button" class="btn" data-row="4" data-column="8"></button>
+        <button type="button" class="btn btn_end" data-row="4" data-column="9"></button>
+      </div>
+      <div class="line_5 square" id="line_5">
+        <button type="button" class="btn btn_top" data-row="5" data-column="1"></button>
+        <button type="button" class="btn" data-row="5" data-column="2"></button>
+        <button type="button" class="btn" data-row="5" data-column="3"></button>
+        <button type="button" class="btn" data-row="5" data-column="4"></button>
+        <button type="button" class="btn" data-row="5" data-column="5"></button>
+        <button type="button" class="btn" data-row="5" data-column="6"></button>
+        <button type="button" class="btn" data-row="5" data-column="7"></button>
+        <button type="button" class="btn" data-row="5" data-column="8"></button>
+        <button type="button" class="btn btn_end" data-row="5" data-column="9"></button>
+      </div>
+      <div class="line_6 square" id="line_6">
+        <button type="button" class="btn btn_top" data-row="6" data-column="1"></button>
+        <button type="button" class="btn" data-row="6" data-column="2"></button>
+        <button type="button" class="btn" data-row="6" data-column="3"></button>
+        <button type="button" class="btn" data-row="6" data-column="4"></button>
+        <button type="button" class="btn" data-row="6" data-column="5"></button>
+        <button type="button" class="btn" data-row="6" data-column="6"></button>
+        <button type="button" class="btn" data-row="6" data-column="7"></button>
+        <button type="button" class="btn" data-row="6" data-column="8"></button>
+        <button type="button" class="btn btn_end" data-row="6" data-column="9"></button>
+      </div>
+      <div class="line_7 square" id="line_7">
+        <button type="button" class="btn btn_top" data-row="7" data-column="1"></button>
+        <button type="button" class="btn" data-row="7" data-column="2"></button>
+        <button type="button" class="btn" data-row="7" data-column="3"></button>
+        <button type="button" class="btn" data-row="7" data-column="4"></button>
+        <button type="button" class="btn" data-row="7" data-column="5"></button>
+        <button type="button" class="btn" data-row="7" data-column="6"></button>
+        <button type="button" class="btn" data-row="7" data-column="7"></button>
+        <button type="button" class="btn" data-row="7" data-column="8"></button>
+        <button type="button" class="btn btn_end" data-row="7" data-column="9"></button>
+      </div>
+      <div class="line_8 square" id="line_8">
+        <button type="button" class="btn btn_top" data-row="8" data-column="1"></button>
+        <button type="button" class="btn" data-row="8" data-column="2"></button>
+        <button type="button" class="btn" data-row="8" data-column="3"></button>
+        <button type="button" class="btn" data-row="8" data-column="4"></button>
+        <button type="button" class="btn" data-row="8" data-column="5"></button>
+        <button type="button" class="btn" data-row="8" data-column="6"></button>
+        <button type="button" class="btn" data-row="8" data-column="7"></button>
+        <button type="button" class="btn" data-row="8" data-column="8"></button>
+        <button type="button" class="btn btn_end" data-row="8" data-column="9"></button>
+      </div>
+      <div class="line_9 square" id="line_9">
+        <button type="button" class="btn btn_9 btn_top" data-row="9" data-column="1"></button>
+        <button type="button" class="btn btn_9" data-row="9" data-column="2"></button>
+        <button type="button" class="btn btn_9" data-row="9" data-column="3"></button>
+        <button type="button" class="btn btn_9" data-row="9" data-column="4"></button>
+        <button type="button" class="btn btn_9" data-row="9" data-column="5"></button>
+        <button type="button" class="btn btn_9" data-row="9" data-column="6"></button>
+        <button type="button" class="btn btn_9" data-row="9" data-column="7"></button>
+        <button type="button" class="btn btn_9" data-row="9" data-column="8"></button>
+        <button type="button" class="btn btn_9 btn_end" data-row="9" data-column="9"></button>
+      </div>
+    </section>
+    <section class="reset" id="reset">
+      <input type="button" value="盤面をリセット" class="resetButton" id="resetButton">
+    </section>
+    <section class="returnTop">
+      トップページに戻る
+    </section>
+    
+  </main>
+  <footer class="footer">
+    &copy;Keita Nakao
+  </footer>
+  <script src="./code.jquery.com_jquery-3.7.0.min.js"></script>
+  <script src="./gomoku.js"></script>
+</body>
+</html>
